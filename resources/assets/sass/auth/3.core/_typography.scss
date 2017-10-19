@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #TYPOGHRAPY
+\*------------------------------------*/
+
+body{
+	font-family: $body-regular;
+	color: $color-main;
+	font-weight: 400;
+	line-height: 1.6;
+	font-size: 1.9rem;
+}
+
+h1, h2, h3, h4, h5, h6, th{
+	color: $color-main;
+	margin: 0 0 0.6em 0;
+	line-height: 1.18;
+}
+
+p, .p {
+	margin: 0 0 1em 0;
+	max-width: 750px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.font-bold {
+	font-family: $body-bold;
+}
+
+a {
+	transition: $transition1;
+	text-decoration: none;
+	color: initial;
+	cursor: pointer;
+}
+
+p a{
+	color: $color-main;
+
+	&:hover{
+		color: $color-main--dark;
+	}
+}

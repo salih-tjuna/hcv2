@@ -1,0 +1,186 @@
+/*------------------------------------*\
+  #STANDARD BUTTON
+\*------------------------------------*/
+
+.btn-wrap {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.btn{
+	font-family: $body-regular;
+	background: transparent;
+	transition: $transition1;
+	box-shadow: none;
+	border: none;
+	white-space: normal;
+	padding: 0.8em 4.25em 0.8em 2em;
+	display: inline-block;
+	font-size: 1.7rem;
+	border-radius: 16em;
+	margin-right: 18px;
+	color: #fff;
+	border: 2px solid $color-main;
+	color: $color-main;
+	position: relative;
+
+	&:hover{
+		background: $color-main;
+		color: #fff;
+
+		figure {
+			background-position: 3px;
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+  #COLOR VARIATION
+\*------------------------------------*/
+
+// color black
+.btn--black{
+	background: black;
+
+	&:hover{
+		background: lighten(black, 10%);
+	}
+}
+
+.btn--black.btn--ghost{
+	color: black;
+	box-shadow: inset 0px 0px 0px .15em black;
+
+	&:hover{
+		
+	}
+}
+
+
+// color white
+.btn--white{
+	background: #fff;
+	color: black;
+
+	&:hover{
+		background: darken(#fff, 10%);
+		color: black;
+	}
+}
+
+.btn--white.btn--ghost{
+	color: #fff;
+	box-shadow: inset 0px 0px 0px .15em #fff;
+
+	&:hover{
+		
+		color: black;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+  #ROUNDED BUTTON
+\*------------------------------------*/
+
+.btn--rounded{
+	border-radius: 4em;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #BIG
+\*------------------------------------*/
+
+.btn--big{
+	font-size: 1.9rem;
+}
+
+.btn--small{
+  padding: 0.4em 1.4em 0.37em 1.4em;
+	font-size: 1.9rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #GHOST BUTTON
+\*------------------------------------*/
+
+.btn--ghost{
+	color: $color-main;
+	box-shadow: inset 0px 0px 0px .15em $color-main;
+	background: transparent;
+
+	&:hover{
+		color: #fff;
+		background: $color-main;
+		box-shadow: none;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+  #DISABLED
+\*------------------------------------*/
+
+.btn--disabled{
+	cursor: not-allowed;
+	box-shadow: none;
+	color: #fff;
+
+	&:hover{
+		box-shadow: none;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+  #TEXT LINK
+\*------------------------------------*/
+
+// text links
+.text-link,
+.text-link a {
+	color: $color-main;
+	font-family: $body-bold;
+
+	&:hover{
+		color: $color-main--dark;
+	}
+}
+
+.btn-text {
+  color: $color-main;
+  border-bottom: 1px solid blue;
+  padding-bottom: 1px;
+	margin-right: 18px;
+
+	&:last-child{
+		margin-right:  0;
+	}
+
+	&:hover{
+		color: $color-main--dark;
+		border-color: $color-main--dark;
+	}
+}

@@ -1,0 +1,42 @@
+// Buttons 
+
+.btn, .btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised), .input-group-btn .btn:not(.btn-raised).btn-default {
+  color: $dark-navy-blue;
+  font-weight: 600;
+}
+
+.btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
+  background: $secondary-color;
+  color: $white;
+  font-weight: 600;
+
+  &:hover, &:active, &:focus {
+    background: lighten($secondary-color, 5%);
+  }
+}
+
+.btn.btn-raised.btn-primary, .btn.btn-fab.btn-primary, .btn-group-raised .btn.btn-primary, .input-group-btn .btn.btn-raised.btn-primary, .input-group-btn .btn.btn-fab.btn-primary, .btn-group-raised .input-group-btn .btn.btn-primary {
+  background: $secondary-color;
+
+  i {
+    color: $white;
+  }
+
+  &:hover, &:focus, &:active {
+    background: lighten($secondary-color-darker, 5%);
+    @include focus-shadow();
+  }
+}
+
+td{
+  .btn{
+    padding:0px;
+  }
+  .highlighted{
+    color: #ffd600;
+    &:hover{
+      color: #ffd600;
+      cursor: default !important;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.auth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 100vw;
+	height: 100vh;
+    background-color: rgba(28, 68, 89, 0.3);
+
+	&__card {
+		display: flex;
+		flex-direction: row;
+	    max-width: 1100px;
+    	min-height: 550px;
+    	box-shadow: $shadow-equal-md;
+
+		&-brand {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    align-content: center;
+			position: relative;
+			min-width: 550px;
+			width: 56%;
+			background: $color-second;
+
+			&__logos {
+				display: flex;
+				flex-direction: row;
+
+				.brand-divider {
+					width: 1px;
+					height: 55px;
+					margin: 0 25px;
+					background: $color-main;
+				}
+
+				a {
+					img {
+						height: 54px;
+						width: auto;
+					}
+				}
+			}
+	
+			&__version {
+				position: absolute;
+				bottom: 40px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+
+				img {
+					height: 14px;
+					width: auto;
+				}
+
+				span {
+					margin-left: 9px;
+					font-size: 1rem;
+					font-family: proxima-regular;
+					letter-spacing: 2.5px;
+					line-height: 2.8rem;
+
+				}
+			}
+		}
+
+		&-input {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    align-content: center;
+			width: 44%;
+			min-width: 450px;
+			background: white;
+
+			&__intro {
+				width: 350px;
+
+				h2 {
+					text-align: center;
+					font-size: 2.3rem;
+					color: $color-main;
+					margin-bottom: 60px;
+					font-family: $heading-bold;
+				}
+			}
+
+			&__form {
+			    width: 100%;
+
+				form {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				.input-wrap {
+					width: 200px;
+				    margin: 0 auto;
+				}
+
+				.password-login {
+					margin: 15px 0 5px;
+				}
+
+				textarea, select, input[type="text"], input[type="email"], input[type="password"] {
+				    border: none;
+				    transition: 0.28s all ease;
+				    display: block;
+				    box-sizing: border-box;
+			        padding: 10px 0px 4px 0;
+			        width: 100%;
+				    font-family: proxima-light;
+				    font-size: 1.6rem;
+				    border-bottom: 1px solid $color-main;
+
+				    &:focus {
+				    	outline: 0;
+				    }
+				}
+
+				.checkbox-auth {
+					display: flex;
+					flex-direction: row;
+					margin: 10px 0 25px;
+
+					label {
+						line-height: 1rem;
+					    font-size: 1.3rem;
+
+					}
+
+					input[type="checkbox"] {
+						margin-right: 5px;
+						width: auto;
+					}
+				}
+
+				.auth-btn {
+				    color: white;
+				    font-size: 1.1rem;
+				    letter-spacing: 1.975px;
+				    font-family: proxima-semi-bold;
+				    text-transform: uppercase;
+				    padding: 13px 40px 12px;
+				    border: none;
+				    border-radius: 50px;
+				    display: block;
+				    margin: 0 auto;
+					background: $color-tertiary;
+					box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+					transition: $transition1;
+
+					&:hover {
+						background: $color-main;
+						box-shadow: 0px 3px 40px 0px rgba(0, 0, 0, 0.5);
+					}
+				}
+
+				.login-auth-wrap {
+				    margin: 15px auto 20px;
+				}
+
+				.reset-password-auth-wrap {
+					margin: 50px auto 0px;
+				    width: 100%;
+				}
+
+				.new-pass-input-wrap {
+					margin-bottom: 20px;
+				}
+
+				.auth-btn-ghost {
+					color: $color-main;
+					font-family: proxima-semi-bold;
+					letter-spacing: 1.975px;
+					text-transform: uppercase;
+					font-size: 1rem;
+					transition: $transition2;
+				    border-bottom: 1px solid transparent;
+    				padding-bottom: 1px;
+
+					&:hover {
+						border-bottom: 1px solid $color-main;
+						padding-bottom: 2px;
+					}
+				}
+
+				.forgot-login {
+					margin: 20px 0 0 0;
+				}
+
+			}
+		}
+
+	}
+}

@@ -1,0 +1,61 @@
+.tab-table {
+	margin: 0 20px;
+}
+
+.table {
+
+	thead {
+		background: $white;
+		border-bottom: 3px solid $light-gray;
+
+		tr {
+			th {
+				padding: 25px 8px 6px 8px;
+				font-size: 1.1em;
+				font-weight: 600;
+			}
+		}
+	}
+
+	tbody {
+
+		.user-action-block {
+			float: right;
+
+			form, button, a {
+				@include clean-button;
+			}
+
+			a i, button i {
+				float:left;
+				vertical-align: middle;
+				padding: 0 5px;
+				color: $dark-navy-blue;
+				transition: ease-in 0.1s;
+
+				&:hover, &:active {
+					color: darken($dark-gray, 15%);
+					transition: ease-out 0.2s;
+				}
+			}
+		}
+
+	}
+}
+
+// Activiteiten log styling
+
+.dataTables_filter {
+
+	input {
+		border: none;
+		padding: 5px;
+		border-bottom: 2px solid $light-gray;
+		transition: ease-in-out .2s;
+
+		&:active, &:focus {
+			border-bottom: 2px solid $primary-color;
+			transition: ease-in-out .2s;
+		}
+	}
+}

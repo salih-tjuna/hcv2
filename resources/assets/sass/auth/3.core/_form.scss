@@ -1,0 +1,52 @@
+/*------------------------------------*\
+  #Form
+\*------------------------------------*/
+
+textarea {
+  margin-bottom: 28px;
+}
+
+input[type=submit],
+input[type=radio],
+input[type=checkbox]{
+  width: initial;
+}
+
+input[type=submit] {
+  @extend .btn;
+  @extend .btn--rounded;
+  @extend .btn--big;
+  border: none;
+  margin-top: 15px;
+}
+
+input[type=radio]~label {
+  display: initial;
+}
+
+.checkbox,
+.radio{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"],
+  input[type="radio"]{
+    margin: 0 10px 0 0;
+  }
+}
+
+.input{
+  margin-bottom: 2.5rem;
+}
+
+// Btn group
+.btn-group {
+  display: flex;
+
+  .input {
+    margin: 0;
+    display: inline;
+  }
+}

@@ -1,0 +1,108 @@
+/*------------------------------------*\
+  #STANDARD BUTTON
+\*------------------------------------*/
+
+.btn{
+	font-family: $body-regular;
+	background: transparent;
+	transition: $transition1;
+	text-transform: lowercase;
+	box-shadow: none;
+	border: none;
+	white-space: normal;
+	padding: 0.6em 2.85em 0.6em 1.5em;
+	display: inline-block;
+	font-size: 1.7rem;
+	letter-spacing: .37rem;
+	border-radius: 16em;
+	margin-right: 18px;
+	color: #fff;
+	border: 1px solid $color-main;
+	color: $color-main;
+	position: relative;
+
+	&:hover{
+		background: $color-tertiary;
+		border-color: $color-tertiary;
+		color: #fff;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+		padding: 0.6em 2.85em 0.6em 2.85em;
+
+		figure {
+			background: $color-tertiary;
+
+			&:before, &:after {
+				background: $color-tertiary;				
+			}
+		}
+
+	}
+
+	figure {
+		width: 10px;
+		height: 1px;
+		background: $color-main;
+		position: absolute;
+		right: 20px;
+		top: calc(50% - 1px);
+
+		&:before, &:after {
+			position: absolute;
+			content: "";
+			width: 5px;
+			height: 1px;
+			background: $color-main;
+			right: 0;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		    top: -2px;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		    top: 2px;
+		}
+	}
+}
+
+/*------------------------------------*\
+  #COLOR VARIATION
+\*------------------------------------*/
+
+// color black
+.btn--black{
+	background: black;
+
+	&:hover{
+		background: lighten(black, 10%);
+	}
+}
+
+.btn--black.btn--ghost{
+	color: black;
+	box-shadow: inset 0px 0px 0px .15em black;
+
+	&:hover{
+		
+	}
+}
+
+/*------------------------------------*\
+  #GHOST BUTTON
+\*------------------------------------*/
+
+.btn--ghost{
+	color: $color-main;
+	box-shadow: inset 0px 0px 0px .15em $color-main;
+	background: transparent;
+
+	&:hover{
+		color: #fff;
+		background: $color-main;
+		box-shadow: none;
+	}
+}

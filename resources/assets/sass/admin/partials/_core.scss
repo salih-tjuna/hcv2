@@ -1,0 +1,631 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	color: $text-color;
+	font-family: $primary-font;
+	-webkit-font-smoothing: antialiased;
+}
+
+a, a:hover, a:active {
+	color: $primary-color;
+}
+
+.green-title {
+	color: $primary-color;
+}
+
+body {
+	background: #ECECEB;
+	margin: 0;
+	padding: 0;
+}
+
+.clean-button {
+	@include clean-button;
+}
+
+tr.soft-deleted-row {
+	background-color:#EF9A9A !important;
+}
+
+.soft-hidden{
+	display: none;
+}
+
+
+// Alerts 
+
+.alert {
+	background-color: $off-white;
+	max-width: 440px;
+	width: 100%;
+	position: fixed;
+	padding: 0;
+	bottom: 20px;
+	right: 20px;
+	overflow: hidden;
+	z-index: 1000;
+	transition: ease-in-out 0.2s;
+	@include shadow-z-1;
+
+	&:hover, &:focus {
+		@include shadow-z-2;
+		transition: ease-in-out 0.2s;
+	}
+
+	.alert-status {
+		float: left;
+		position: relative;
+		min-height: 56px;
+		margin-left: -30px;
+
+		i {
+			color: $white;
+			float:left;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 2.5em;
+			padding: 10px 5px 5px 47px;
+		}
+
+		.alert-status-bg {
+			position: absolute;
+			background: $primary-color;
+			height: 420px;
+			width: 100px;
+			top: -20px;
+			left: -30px;
+			transform: rotate(10deg);
+		}
+	}
+
+	.inner-alert {
+		width: 100%;
+
+		.alert-text {
+			font-weight: 600;
+			padding: 15px;
+			font-size: 1.1em;
+			color: $dark-navy-blue;
+			margin-left: 70px;
+		}
+
+		.close {
+			color: $dark-navy-blue;
+			opacity: .5;
+			font-size: 2.1em;
+			padding: 12px;
+
+			&:hover, &:focus {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.alert.alert-success, .alert.alert-danger {
+	background-color: $white;
+}
+
+.alert.alert-danger .alert-status .alert-status-bg {
+	background: $red;
+}
+
+.form-group {
+
+	.finish {
+		margin: 40px 0;
+		position: relative;
+		bottom: 50px;
+		float: right;
+	}
+}
+
+.floating-action-button {
+	float: right;
+	position: relative;
+	top: -70px;
+}
+
+.float-left { float: left !important }
+.float-right { float: right !important }
+
+.title { color: $white; }
+.subtitle { color: $gray; }
+
+.red, .red-c { color: $red !important; }
+.red-c {display: inline;}
+
+.well {
+
+	.title {
+		color: $primary-color;
+	}
+
+	.subtitle {
+		color: $primary-color-darker;
+	}
+}
+
+.inline {
+	display: inline !important;
+}
+
+.green-back {
+	background: $primary-color-darker;
+	height: 230px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	
+}
+
+.margin-null{
+	margin: 0 !important;
+}
+
+.dropdown,
+.sidebar nav ul li {
+	list-style: none;
+}
+
+.dropdown-menu {
+	min-width: 220px;
+	background: $off-white;
+
+	i {
+		padding: 5px;
+	}
+
+	li a, .dropdown-item {
+		padding: 10px 20px;
+
+		&:hover, &:active {
+			color: lighten($dark-navy-blue, 5%);
+		}
+	}
+}
+//
+//// Declaring font faces
+//@font-face {
+//  font-family: 'nantes-web-bold';
+//  src: url('../../../frontend/fonts/NantesWeb-Bold_gdi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//       url('../../../frontend/fonts/NantesWeb-Bold_gdi.woff') format('woff'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/NantesWeb-Bold_gdi.svg')  format('svg'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: 'apercu-regular';
+//  src: url('../../../frontend/fonts/apercu_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//       url('../../../frontend/fonts/apercu_regular.woff') format('woff'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_regular.woff2') format('woff2'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_regular.ttf') format('ttf'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_regular.svg')  format('svg'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: 'apercu-medium';
+//  src: url('../../../frontend/fonts/apercu_medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//       url('../../../frontend/fonts/apercu_medium.woff') format('woff'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_medium.woff2') format('woff2'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_medium.ttf') format('ttf'), /* Pretty Modern Browsers */
+//       url('../../../frontend/fonts/apercu_medium.svg')  format('svg'); /* Safari, Android, iOS */
+//}
+//
+//// Setting variables for declared font faces
+//$font-header			:  "nantes-web-bold"	;
+//$font-content-regular	:  "apercu-regular"		;
+//$font-content-medium	:  "apercu-medium"		;
+//
+//// Creating classes to insert variables
+//.font-header     		{  font-family: $font-header,			sans-serif;     	}
+//.font-content-regular	{  font-family: $font-content-regular,	sans-serif;		}
+//.font-content-medium	{  font-family: $font-content-medium,	sans-serif;		}
+//
+
+// Bitter - Serif font - Main Tjuna Header font
+@font-face {
+  font-family: 'bitter-bold';
+  src: url('../fonts/vendor/Bitter-Bold.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'bitter-italic';
+  src: url('../fonts/vendor/Bitter-Italic.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'bitter-regular';
+  src: url('../fonts/vendor/Bitter-Regular.ttf') format('ttf')
+}
+
+// Proxima Nova - Sans Serif font - Main Tjuna Body font
+@font-face {
+  font-family: 'proxima-black';
+  src: url('../fonts/vendor/ProximaNova-Black.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-extra-bold';
+  src: url('../fonts/vendor/ProximaNova-Extrabold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-bold';
+  src: url('../fonts/vendor/ProximaNova-Bold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-bold-italic';
+  src: url('../fonts/vendor/ProximaNova-BoldIt.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-light';
+  src: url('../fonts/vendor/ProximaNova-Light.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-light-italic';
+  src: url('../fonts/vendor/ProximaNova-LightItalic.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-regular-italic';
+  src: url('../fonts/vendor/ProximaNova-RegItalic.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-regular';
+  src: url('../fonts/vendor/ProximaNova-Regular.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-semi-bold';
+  src: url('../fonts/vendor/ProximaNova-Semibold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'proxima-semi-bold-italic';
+  src: url('../fonts/vendor/ProximaNova-SemiboldItalic.otf') format('opentype')
+}
+
+
+
+.chosen-container-multi .chosen-choices, .chosen-container .chosen-choices {
+	border: none;
+	box-shadow: none;
+	outline: none;
+	border-bottom: 1px solid $medium-gray;
+	background: transparent;
+	padding: 8px 0;
+
+	li.search-choice {
+		padding: 15px 30px 15px 15px;
+		border: none;
+		background: $dark-navy-blue;
+		cursor: pointer;
+
+		&:hover, &:focus {
+			background: lighten($dark-navy-blue, 10%);
+		}
+
+		span {
+			font-weight: 600;
+			font-size: 1.1em;
+			color: $white;
+		}
+
+		.search-choice-close {
+			right: 10px;
+			top: 16px;
+
+			&:hover {
+				background-position: -42px 1px;
+				-webkit-filter: brightness(1.5);
+				filter: brightness(1.5);
+			}
+
+		}
+	}
+}
+
+.chosen-container .chosen-results {
+
+	li, li.active-result {
+		padding: 15px;
+	}
+
+	li.highlighted {
+		background: $light-gray;
+		color: $dark-navy-blue;
+	}
+}
+
+.change-form {
+	h5 {
+		font-size: 1.2em;
+		color: $primary-color;
+		font-weight: 600;
+	}
+}
+
+// selector plugin styling on templates page
+
+.ui-state-default {
+	border: none;
+	background: none;
+	font-weight: normal;
+	border-bottom: 1px solid $light-gray;
+}
+.ui-state-active {
+	@extend .ui-state-default;
+	background: $light-gray;
+	padding-bottom: 10px;
+}
+
+.ui-multiselect-header ul li {
+	padding: 0 10px;
+}
+
+.ui-state-default .ui-icon {
+	filter: brightness(50%);
+	-webkit-filter: brightness(50%);
+	-moz-filter: brightness(50%);
+	-ms-filter: brightness(50%);
+}
+
+.ui-widget-header {
+	@extend .ui-state-default;
+	padding: 0 0 20px 0;
+}
+
+.ui-widget-header .ui-icon {
+	@extend .ui-icon;
+}
+
+.ui-widget-content {
+	background: $white;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	@extend .ui-state-default;
+	background: $light-gray;
+}
+
+// Animations 
+
+.delay-1 {
+	animation-delay: .5s;
+	-moz-animation-delay: .5s;
+	-webkit-animation-delay: .5s;
+}
+.delay-2 {
+	animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+.delay-3 {
+	animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}

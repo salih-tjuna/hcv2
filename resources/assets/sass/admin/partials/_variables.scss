@@ -1,0 +1,53 @@
+
+$primary-font: 							    'Source Sans Pro', 'Helvetica', Arial, sans-serif !default;
+
+$primary-color:								#2980b9;
+$primary-color-darker:						darken($primary-color, 5%) !default;
+$secondary-color:							#34495e;
+$secondary-color-darker:					darken($secondary-color, 5%) !default;
+
+$bg-gray:									#eeeeee;
+$off-white:								    #f2f2f2 !default; // #f2f2f2
+$white:									    $off-white !default; // #ffffff
+$light-gray:							    #EEEEEF !default;
+$medium-gray:					      		#D3DADD !default;
+$gray:									    #B7C6CC !default;
+$dark-gray:						      		#8697AA !default;
+$dark-navy-blue:				    		#374254 !default; // #374254
+$red: 								        #F14338 !default;
+$text-color:						      	$dark-navy-blue !default;
+
+$header-size:							   	1.3em;
+$padding:							        20px 60px;
+
+$btn-primary-bg:        					$secondary-color;
+$btn-primary-color:     					#fff !important;
+$mdb-text-color-primary: 					$btn-primary-color;
+
+$btn-default-bg:        					$btn-primary-bg;
+$btn-default-color:     					$btn-primary-color;
+$mdb-text-color-default: 					$mdb-text-color-primary;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin title($color, $size) {
+  font-weight: 600;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin clean-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: none;
+	border: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}

@@ -1,0 +1,167 @@
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+// Colors names
+$black-bro         		         : #000000;
+$white					     : #ffffff;
+$orange         			 : #f67721;
+
+$brand-color-main			 : #29B8CA;
+
+.red
+{
+  background-color: #FF0000;
+}
+
+.font_red
+{
+  color: #FF0000;
+}
+
+.green
+{
+  background-color: #019900;
+}
+
+.sub_green{
+  background-color: #2d8634;
+}
+
+.font_green{
+  color: #3baa55;
+}
+
+.yellow
+{
+  background-color:#FFDE00;
+}
+
+.sub_yellow{
+  background-color: #f9c422;
+}
+
+.font_yellow{
+  color: #f9e061;
+}
+
+.orange
+{
+  background-color: #ff8814;
+}
+
+.font_orange{
+  color: #FFBF71;
+}
+
+.text_orange{
+  color: #ff6800;
+}
+
+.blue
+{
+  background-color: #0026FF;
+}
+
+.sub_blue{
+  background-color: #0f0985;
+}
+
+.font_blue{
+  color: #5687ff;
+}
+
+.purple
+{
+  background-color: #CC0098;
+}
+
+.font_purple
+{
+  color: #cc62aa;
+
+}
+
+.sub_purple{
+  background-color: #cf5071;
+}
+
+// $brand-color-secondary		 : ;
+// $brand-color-tertiary		 : ;
+// $brand-color-quaternary		 : ;
+
+
+//// Element-colors
+//$color-main                  : $cello;
+//$color-main--light			 : lighten($color-main, 20%);
+//$color-main--dark		     : darken($color-main, 20%);
+//
+//$color-second                : $alabaster;
+//$color-tertiary				 : $puerto-rico;
+//
+//$color-logo 				 : $cello;
+//$color-logo-inner			 : $brand-color-main;
+//
+//$color-selection			 : #b9b9b9;
+//$scrollbar-color		     : #b9b9b9;
+
+
+/*------------------------------------*\
+  #TYPOGRAHPY
+\*------------------------------------*/
+
+// Fonts - Headings
+$heading-bold				: bitter-bold;
+$heading-regular			: bitter-regular;
+
+// Fonts - Body
+$body-black					: proxima-black;
+$body-extra-bold			: proxima-extra-bold;
+$body-bold					: proxima-bold;
+$body-semi-bold				: proxima-semi-bold;
+$body-regular				: proxima-regular;
+$body-light					: proxima-light;
+
+/*------------------------------------*\
+  #SHADOWS
+\*------------------------------------*/
+
+// Box-shadows
+$shadow-equal-md				: 0px 0px 10px 0px rgba(0,0,0,0.35);
+
+$shadow-sm  	        		: 1px 4px 9px rgba(0, 0, 0, 0.09), 0 4px 17px rgba(0, 0, 0, 0.1);
+$shadow-md	       			    : 0px 4px 12px 0px rgba(0,0,0,0.35);
+$shadow-lg	        			: 0px 8px 10px 0px rgba(0,0,0,0.35);
+
+
+// Text-shadows
+$text-shadow-sm            : 2px 1px 4px rgba(#1d1d1d, 0.5);
+$text-shadow-lg            : 2px 1px 4px rgba(#1d1d1d, 0.7);
+
+
+/*------------------------------------*\
+  #ANIMATION
+\*------------------------------------*/
+
+// Transtions
+$transition1					    : 0.28s all ease;
+$transition2					    : 0.38s all ease;
+$transition3					    : 0.55s all ease;
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+// Device widths
+$mobile-width             : 468px;
+$tablet-width             : 768px;
+$desktop-width            : 1024px;
+
+
+// Boostrap/Foundation
+$xl                       : 1200px;
+$lg                       : 979px;
+$md                       : 767px;
+$sm                       : 480px;
+$xs                       : 320px;

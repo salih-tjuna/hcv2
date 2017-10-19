@@ -1,0 +1,169 @@
+/*------------------------------------*\
+  #Form
+\*------------------------------------*/
+
+//textarea {
+//  margin-bottom: 28px;
+//}
+
+hr{
+  margin-top: 30px;
+}
+
+form{
+  //padding-left: 25px;
+  //padding-right: 25px;
+  //padding-bottom: 25px;
+
+  .info-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 3.75%;
+    padding-right: 15%;
+
+    p{
+      align-self: center;
+      //padding-right: 10px;
+    }
+  }
+
+  .info-container__inputbox{
+
+    display: flex;
+
+    p{
+      padding-right: 15px;
+      font-family: 'Open Sans', opensans-bold;
+      font-weight: 600;
+      align-self: center;
+    }
+  }
+
+}
+
+.body--gray{
+  background-color: #dfdfdf;
+  padding-top: 4%;
+  position: relative;
+}
+
+.wrapper-form {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  background-color: #ffffff;
+
+  .button__container
+  {
+    display: inline-flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .button {
+    background-color: #fb7820; /* Green */
+    color: white;
+    margin-right: 1em;
+    padding: 4px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+
+    h4{
+      font-family: "Open Sans", opensans-regular;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 40px;
+      color: #ffffff;
+    }
+  }
+
+  .button:hover
+  {
+    //background-color: red;
+    margin: 0;
+  }
+
+  .driehoek {
+
+    width: 25px;
+    height: 25px;
+    border-left: 25px solid #fb7820;
+    border-top: 23.5px solid transparent;
+    border-bottom: 24.5px solid transparent;
+  }
+}
+
+input[type=submit],
+input[type=radio],
+input[type=checkbox]{
+  width: initial;
+}
+
+input[type=submit] {
+  border: none;
+  margin-top: 15px;
+}
+
+input[type=radio]~label {
+  display: initial;
+  font-family: 'Open Sans', opensans-semibold ;
+}
+
+.checkbox,
+.radio{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  input[type="checkbox"],
+  input[type="radio"]{
+    margin: 0 10px 0 0;
+  }
+}
+
+.input{
+  margin-bottom: 0.5rem;
+}
+
+.input:last-of-type
+{
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+.question{
+  padding-top: 2em;
+  font-family: 'Open Sans', opensans-bold ;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+.label{
+  padding-bottom: 1em;
+}
+
+@media only screen and (max-width: 1125px) {
+
+  .wrapper-form
+  {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .title__container h1{
+    font-size: 25px;
+  }
+
+  form .info-container{
+    padding-top: 10%;
+  }
+
+}
+
